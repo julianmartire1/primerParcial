@@ -58,9 +58,15 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback,
 
         if(v.getId() == R.id.btnRestar){
             Log.d("RESTAR", p.toString());
+            if(p.getCantidad() > 0){
+                p.restarCantidad();
+                adapter.notifyItemChanged(position);
+            }
         }
         if(v.getId() == R.id.btnSumar){
             Log.d("SUMAR", p.toString());
+            p.sumarCantidad();
+            adapter.notifyItemChanged(position);
         }
     }
 }

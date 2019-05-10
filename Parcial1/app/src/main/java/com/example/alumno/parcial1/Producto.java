@@ -62,10 +62,10 @@ public class Producto {
     }
 
 
-    public void masCantidad(){
+    public void sumarCantidad(){
         this.cantidad = this.cantidad + 1;
     }
-    public void menosCantidad(){
+    public void restarCantidad(){
         this.cantidad = this.cantidad - 1;
     }
 }
